@@ -6,3 +6,4 @@ streamlit==1.62.0
 plotly==6.9.0
 matplotlib==3.10.9
 joblib==1.6.0
+mlflow==3.17.2
