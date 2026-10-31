@@ -1,0 +1,33 @@
+{
+  "Q1": "Prices range 10-500 lakhs with a near-uniform spread (median 254L, skew 0.01); no long right tail typical of real housing markets.",
+  "Q2": "Sizes span 500-5000 sq ft, roughly uniform (median 2747).",
+  "Q3": "Median INR/sqft by type: {'Apartment': 9245.0, 'Independent House': 9305.0, 'Villa': 9190.0} - type has almost no effect.",
+  "Q4": "Correlation between size and price is -0.003, i.e. essentially none. In real markets this would be strongly positive, which signals the dataset is synthetic.",
+  "Q5": "IQR outliers: 19,723 rows (7.9%) in price/sqft, 0 in size. They arise from small flats with high price, flagged but retained.",
+  "Q6": "Highest: Karnataka (13,252); lowest: Punjab (12,931) INR/sqft.",
+  "Q7": "City averages only span 251-258 lakhs (top Bangalore, bottom Cuttack): geography barely moves price here.",
+  "Q8": "Locality median age ranges 16-21 yrs; overall median 18. Oldest: Locality_403.",
+  "Q9": "BHK 1-5 are about evenly split (~20% each) in every city.",
+  "Q10": "Top-5 localities by mean price: ['Locality_395', 'Locality_366', 'Locality_497', 'Locality_360', 'Locality_203']. The data has no transaction dates, so trend is shown by Year_Built, and it is noisy with no clear upward drift.",
+  "Q11": "Only structural relationship: price/sqft vs size (-0.61) and vs price (0.56), both by construction (ratio). Other sizeable pairs are also engineered: Floor_No vs Total_Floors (0.60, after the floor fix) and Infrastructure_Score vs schools/hospitals (0.58/0.48). Every pair of raw attributes is uncorrelated (|r|<0.01).",
+  "Q12": "r = -0.000; mean price/sqft is flat across 1-10 schools.",
+  "Q13": "r = -0.000; mean price/sqft is flat across 1-10 hospitals.",
+  "Q14": "Mean price by furnishing: {'Fully-furnished': 254.4, 'Semi-furnished': 254.3, 'Unfurnished': 255.0} lakhs - differences are negligible.",
+  "Q15": "Mean INR/sqft by facing: {'East': 13024.0, 'North': 13025.0, 'South': 13044.0, 'West': 13140.0} - no direction premium.",
+  "Q16": "Owner types: {'Broker': 83479, 'Individual': 83268, 'Builder': 83253}.",
+  "Q17": "Availability: {'Under_Construction': 125035, 'Ready_to_Move': 124965}.",
+  "Q18": "Parking vs none: {'No parking': 254.4, 'Parking': 254.7} lakhs - no meaningful effect.",
+  "Q19": "Largest with-vs-without gap: Gym (98 INR/sqft, <1%): amenities do not drive price in this data.",
+  "Q20": "Price/sqft is flat across transport levels, but Good-Investment share rises from 42.3% (Low) to 69.4% (High), because transport feeds the investment score by design.",
+  "Note_crime": "The brief mentions crime rate, but the dataset has no crime column; Security and Infrastructure_Score are used as proxies.",
+  "Security_vs_GoodInvestment": {
+    "No": 0.515,
+    "Yes": 0.5973
+  },
+  "Extra_corr_with_growth": {
+    "Size_in_SqFt": -0.0,
+    "BHK": 0.0,
+    "Infrastructure_Score": 0.233,
+    "Growth_Rate": 1.0
+  }
+}

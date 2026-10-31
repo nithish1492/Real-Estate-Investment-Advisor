@@ -1,0 +1,86 @@
+{
+  "classification": {
+    "LogisticRegression": {
+      "validation_accuracy": 0.87176,
+      "validation_precision": 0.8821880049424959,
+      "validation_recall": 0.8884793950126837,
+      "validation_f1": 0.8853225229521879,
+      "validation_roc_auc": 0.9504804638023354,
+      "validation_brier_score": 0.08929527991557852,
+      "validation_log_loss": 0.2805991000021978
+    },
+    "RandomForest": {
+      "validation_accuracy": 0.9501866666666666,
+      "validation_precision": 0.9631883916833033,
+      "validation_recall": 0.9467764322978988,
+      "validation_f1": 0.9549118995896693,
+      "validation_roc_auc": 0.9923995457463849,
+      "validation_brier_score": 0.049910308295460656,
+      "validation_log_loss": 0.19133259272968905
+    },
+    "XGBoost": {
+      "validation_accuracy": 0.99664,
+      "validation_precision": 0.9969846360024889,
+      "validation_recall": 0.9969846360024889,
+      "validation_f1": 0.9969846360024889,
+      "validation_roc_auc": 0.9999418998846099,
+      "validation_brier_score": 0.0034111140671958667,
+      "validation_log_loss": 0.018827152419833595,
+      "accuracy": 0.9970666666666667,
+      "precision": 0.9971240952883095,
+      "recall": 0.9976022634632906,
+      "f1": 0.9973631220634769,
+      "roc_auc": 0.9999469781477808,
+      "brier_score": 0.002199114392965662,
+      "log_loss": 0.008263833704654304,
+      "confusion_matrix": [
+        [
+          16587,
+          60
+        ],
+        [
+          50,
+          20803
+        ]
+      ]
+    },
+    "_champion": "XGBoost"
+  },
+  "regression": {
+    "Ridge": {
+      "validation_rmse": 7.709878474874483,
+      "validation_mae": 5.147754315523938,
+      "validation_r2": 0.9986579208567304
+    },
+    "RandomForest": {
+      "validation_rmse": 6.343889376507672,
+      "validation_mae": 4.265586864118427,
+      "validation_r2": 0.9990913549513343
+    },
+    "XGBoost": {
+      "validation_rmse": 1.137434721950267,
+      "validation_mae": 0.8609357112240463,
+      "validation_r2": 0.9999707896994732,
+      "rmse": 1.1401160498784004,
+      "mae": 0.8626579132942851,
+      "r2": 0.9999707135594081
+    },
+    "Baseline_Fixed_8pct": {
+      "rmse": 15.895888008095412,
+      "mae": 9.893441908570589,
+      "r2": 0.9943070409287255
+    },
+    "_champion": "XGBoost"
+  },
+  "meta": {
+    "fit_rows": 150000,
+    "validation_rows": 37500,
+    "calibration_rows": 25000,
+    "test_rows": 37500,
+    "positive_rate": 0.5559866666666666,
+    "split_strategy": "60% fit / 15% validation / 10% calibration / 15% independent final test",
+    "calibration_method": "sigmoid (Platt scaling)",
+    "seconds": 478.5,
+    "target_warning": "Targets are rule-generated from this dataset. Scores measure recovery of those rules, not real-world investment or resale-price accuracy."
+  }
+}
